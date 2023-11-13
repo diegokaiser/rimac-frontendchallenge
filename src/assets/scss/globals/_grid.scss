@@ -1,0 +1,7 @@
+@mixin container {
+  margin: 0 auto;
+  width: 90%;
+  @include laptop1280 {
+    max-width: 1120px;
+  }
+}

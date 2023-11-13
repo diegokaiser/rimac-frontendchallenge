@@ -1,0 +1,66 @@
+#root {
+  font-family: $poppins;
+}
+
+.container {
+  @include container;
+}
+
+input {
+  font-family: $poppins;
+}
+
+.d {
+  &-mobile {
+    display: block;
+    @include laptop1280 {
+      display: none;
+    }
+  }
+  &-desktop {
+    display: none;
+    @include laptop1280 {
+      display: block;
+    }
+  }
+}
+
+.btn {
+  align-items: center;
+  border-radius: 64px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  height: 64px;
+  justify-content: center;
+  letter-spacing: 0.4px;
+  padding: 0 40px;
+  &-primary {
+    background: $grey100;
+    border: 3px solid $grey100;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    transition: .35s ease;
+    &:hover {
+      background: white;
+      color: $grey100
+    }
+  }
+  &-secondary {
+    background: $redr;
+    border: 3px solid $redr;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    height: 48px;
+    padding: 0 32px;
+    transition: .35s ease;
+    &:hover {
+      background: white;
+      color: $redr
+    }
+  }
+}

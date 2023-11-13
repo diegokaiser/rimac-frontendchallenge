@@ -1,0 +1,17 @@
+@mixin badge {
+  align-items: center;
+  background: linear-gradient(86deg, #00F4E2 0%, #00FF7F 100%);
+  border-radius: 4px;
+  color: $grey100;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  padding: 2px 8px;
+  gap: 4px;
+  @include laptop1280 {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}

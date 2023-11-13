@@ -1,0 +1,83 @@
+.plan {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  padding: 40px 32px 48px 32px;
+  width: get-width(6, 7);
+  @include laptop1280 {
+    width: get-width(6, 19);
+  }
+  &__title {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    h3 {
+      color: $n700;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      line-height: 32px;
+    }
+    img {
+      height: 56px;
+      width: auto;
+    }
+  }
+  &__price {
+    border-bottom: 1px solid $n400;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    p {
+      color: $n600;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      line-height: 16px;
+      margin-bottom: 5px;
+      text-decoration: line-through;
+      text-transform: uppercase;
+      &:first-child {
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+    strong {
+      color: $n700;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      line-height: 28px;
+    }
+  }
+  &__desc {
+    ul {
+      list-style-type: disc;
+      margin-bottom: 40px;
+      margin-left: 18px;
+      li {
+        color: $n700;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        line-height: 28px;
+        margin-top: 24px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  &__actions {
+    align-items: flex-end;
+    display: flex;
+    flex-grow: 1;
+    button {
+      width: 100%;
+    }
+  }
+}

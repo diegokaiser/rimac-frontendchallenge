@@ -1,0 +1,43 @@
+.footer {
+  background: $grey100;
+  color: white;
+  font-weight: 400;
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 152px;
+    width: get-width(7, 7);
+    @include laptop1280 {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 106px;
+      width: get-width(23, 23);
+    }
+  }
+  &__logo {
+    align-items: center;
+    display: flex;
+    height: 50%;
+    @include laptop1280 {
+      height: unset;
+    }
+  }
+  &__copy {
+    align-items: center;
+    border-top: 1px solid $grey80;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    height: 50%;
+    line-height: 16px;
+    width: 100%;
+    @include laptop1280 {
+      border-top: 0;
+      height: unset;
+      text-align: right;
+      width: unset;
+    }
+  }
+}

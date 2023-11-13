@@ -1,0 +1,101 @@
+@mixin input {
+  background: transparent;
+  border: 0;
+  color: $grey100;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: transparent;
+  }
+  &:placeholder-shown+label+button {
+    display: none;
+  }
+  &:focus+label,
+  &:not(:placeholder-shown)+label {
+    font-size: 12px;
+    top: 8px;
+  }
+}
+
+@mixin label {
+  color: $grey60;
+  font-size: 16px;
+  left: 16px;
+  pointer-events: none;
+  position: absolute;
+  top: 18px;
+  transform-origin: left center;
+  transition: .25s ease;
+}
+
+@mixin select {
+  background: transparent;
+  border: 0;
+  color: $grey100;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+  line-height: 24px;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin checkbox {
+  height: 20px;
+  margin-right: 12px;
+  position: relative;
+  width: 20px;
+  input {
+    &[type='checkbox'] {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 9;
+      &:focus {
+        outline: none;
+      }
+      &:checked+span {
+        opacity: 1;
+        z-index: 8;
+      }
+    }
+  }
+  &:before {
+    background: white;
+    border: 2px solid $grey100;
+    border-radius: 4px;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  span {
+    align-items: center;
+    background: $grey100;
+    border: 2px solid $grey100;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}

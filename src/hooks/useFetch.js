@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseAPI = axios.create({
-  baseURL: '//rimac-front-end-challenge.netlify.app/api/'
+  baseURL: '//rimac-front-end-challenge.netlify.app/api'
 })
 
 export const getUser = async () => {
@@ -10,6 +10,6 @@ export const getUser = async () => {
 }
 
 export const getPlan = async () => {
-  const res = await baseAPI.get(`/plan.json`)
-  return res.data
+  const res = await baseAPI.get(`/plans.json`)
+  return res.data.list
 }

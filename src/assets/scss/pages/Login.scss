@@ -1,0 +1,207 @@
+.login {
+  background: url('./src/assets/images/background-mobile.jpg');
+  background-size: cover;
+  padding-top: 64px;
+  @include laptop1280 {
+    background: url('./src/assets/images/background.jpg');
+    background-size: cover;
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 64px - 152px);
+    width: get-width(7, 7);
+    @include laptop1280 {
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: calc(100vh - 64px - 106px);
+      width: get-width(23, 23);
+    }
+  }
+  &__banner {
+    align-items: flex-start;
+    border-bottom: 1px solid $grey30;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    width: get-width(7, 7);
+    @include laptop1280 {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      width: get-width(10, 23);
+    }
+    .banner {
+      &__text {
+        @include laptop1280 {
+          display: none;
+        }
+        span {
+          @include badge;
+          margin-bottom: 8px;
+        }
+        h2 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 36px;
+        }
+      }
+    }
+    img {
+      height: auto;
+      width: get-width(3, 7);
+      @include laptop1280{
+        width: get-width(10, 10);
+      }
+    }
+  }
+  &__form {
+    width: get-width(7, 7);
+    @include laptop1280 {
+      width: get-width(10, 23);
+    }
+    .form {
+      &__text {
+        color: $grey100;
+        width: get-width(7, 7);
+        @include laptop1280 {
+          width: get-width(8, 10);
+        }
+        span {
+          @include badge;
+          display: none;
+          margin-bottom: 16px;
+          @include laptop1280 {
+            display: inline-block;
+          }
+        }
+        h2 {
+          display: none;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 40px;
+          margin-bottom: 8px;
+          @include laptop1280 {
+            display: block;
+          }
+        }
+        p {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    form {
+      margin-bottom: 77px;
+      width: get-width(7, 7);
+      @include laptop1280 {
+        margin-bottom: 0;
+        width: get-width(7, 10);
+      }
+      .input {
+        &__group {
+          border: 1px solid $grey60;
+          border-radius: 8px;          
+          display: flex;
+          .select__content {
+            border-right: 1px solid $grey60;
+            box-sizing: border-box;
+            padding: 0 16px;
+            width: 45%;
+            select {
+              @include select;
+            }
+          }
+          .input__content {
+            padding: 22px 16px 6px 16px;
+            position: relative;
+            width: 55%;
+            input {
+              @include input;
+            }
+          
+            label {
+              @include label;
+            }
+          }
+        }
+        &__field {
+          margin-top: 16px;
+          .input__content {
+            border: 1px solid $grey60;
+            border-radius: 8px;
+            padding: 22px 16px 6px 16px;
+            position: relative;
+            input {
+              @include input;
+            }
+            label {
+              @include label;
+            }
+          }
+          label {
+            &.label {
+              align-items: center;
+              display: flex;
+              font-size: 12px;
+              font-weight: 400;
+              letter-spacing: 0.1px;
+              line-height: 24px
+            }
+          }
+          .checkbox {
+            @include checkbox;
+          }
+          a {
+            color: $grey100;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+            line-height: 20px;
+            margin-bottom: 8px;
+            position: relative;
+            &::before {
+              border-bottom: 1px solid $grey100;
+              bottom: 1px;
+              content: "";
+              display: block;
+              left: 0;
+              position: absolute;
+              right: 0;
+            }
+          }
+          button {
+            width: 100%;
+            @include laptop1280 {
+              width: initial;
+            }
+          }
+        }
+      }
+      .error {
+        &__group {
+          display: flex;
+          margin-top: 5px;
+          .error__field {
+            width: 55%;
+            &:first-child {
+              width: 45%;
+            }
+          }
+        }
+        &__field {
+          color: $redr;
+          font-size: 10px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

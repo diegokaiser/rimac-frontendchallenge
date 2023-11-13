@@ -1,0 +1,61 @@
+.home {
+  background: $n100;
+  min-height: calc(100vh - 64px);
+  padding-top: 64px;
+  &__content {
+    width: get-width(7, 7);
+    @include laptop1280 {
+      width: get-width(23, 23);
+    }
+    .profile {
+      margin-bottom: 32px;
+      &__content {
+        color: $n700;
+        margin: 0;
+        width: get-width(7, 7);
+        @include laptop1280 {
+          margin: 0 auto;
+          width: get-width(11, 23);
+        }
+        h2 {
+          font-size: 28px;
+          font-weight: 700;
+          letter-spacing: -0.2px;
+          line-height: 36px;
+          margin-bottom: 8px;
+          text-align: left;
+          @include laptop1280 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            line-height: 48px;
+            text-align: center;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+          line-height: 28px;
+          text-align: left;
+          @include laptop1280 {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .plans {
+      padding-bottom: 80px;
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        width: get-width(7, 7);
+        @include laptop1280 {
+          margin: 0 auto;
+          width: get-width(19, 23);
+        }
+      }
+    }
+  }
+}

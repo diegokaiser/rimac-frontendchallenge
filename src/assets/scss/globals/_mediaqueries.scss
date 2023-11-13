@@ -1,0 +1,23 @@
+@mixin mobile420 {
+  @media (min-width: 421px) {
+    @content;
+  }
+}
+
+@mixin tablet720 {
+  @media (min-width: 721px) {
+    @content;
+  }
+}
+
+@mixin laptop1280 {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin mobiland414 {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 940px) and (orientation: landscape) {
+    @content;
+  }
+}

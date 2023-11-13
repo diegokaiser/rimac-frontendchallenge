@@ -1,0 +1,84 @@
+.summary {
+  background: $n100;
+  min-height: calc(100vh - 64px);
+  padding-top: 64px;
+  &__content {
+    width: get-width(7, 7);
+    @include laptop1280 {
+      width: get-width(23, 23);
+    }
+    .data {
+      &__content {
+        margin: 0;
+        width: get-width(7, 7);
+        @include laptop1280 {
+          margin: 0 auto;
+          width: get-width(19, 23);
+        }
+        h2 {
+          color: $n700;
+          font-size: 32px;
+          font-weight: 700;
+          letter-spacing: 0.6px;
+          line-height: 40px;
+          @include laptop1280 {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 42px;
+          }
+        }
+        .profile {
+          background: white;
+          border-radius: 24px;
+          box-shadow: 0px 1px 24px 0px rgba(174, 172, 243, 0.25);
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          padding: 24px 32px;
+          strong {
+            color: $n700;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            line-height: 16px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+          }
+          h4 {
+            align-items: center;
+            color: $n700;
+            display: flex;
+            font-size: 20px;
+            font-weight: 600;
+            justify-content: flex-start;
+            letter-spacing: -0.2px;
+            line-height: 28px;
+            img {
+              margin-right: 12px;
+            }
+          }
+          .myplan {
+            border-top: 1px solid $n400;
+            margin-top: 21px;
+            padding-top: 21px;
+            &__item {
+              margin-top: 24px;
+              &:first-child {
+                margin-top: 0;
+              }
+              p {
+                font-weight: 400;
+                margin-top: 14px;
+                &:first-child {
+                  font-weight: 600;
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

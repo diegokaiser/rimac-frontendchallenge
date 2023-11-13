@@ -1,0 +1,61 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  &.plans {
+    background: #FAFBFF;
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    width: get-width(7, 7);
+    @include laptop1280 {
+      width: get-width(23, 23);
+    }
+  }
+  &__logo {
+    a {
+      display: inline-block;
+      font-size: 0;
+      line-height: 0;
+      svg {
+        height: auto;
+        width: 73px;
+        path {
+          fill: $redr;
+        }
+      }
+    }
+  }
+  &__cta {
+    align-items: center;
+    display: flex;
+    strong {
+      color: $grey100;
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      line-height: 16px;
+      margin-right: 16px;
+      @include laptop1280 {
+        display: inline-block;
+      }
+    }
+    a {
+      color: $grey100;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      line-height: 20px;
+      @include laptop1280 {
+        font-size: 18px;
+      }
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+}

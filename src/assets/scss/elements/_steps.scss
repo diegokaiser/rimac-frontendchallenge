@@ -1,0 +1,100 @@
+.steps {
+  align-items: center;
+  background: $n100;
+  border-bottom: 1px solid $n400;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  margin-bottom: 40px;
+  @include laptop1280 {
+    background: $n200;
+    border-bottom: 0;
+  }
+  .d-mobile {
+    width: 100%;
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    @include laptop1280 {
+      justify-content: center;
+    }
+    button {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      &:disabled {
+        span {
+          background: transparent;
+          border: 1px solid $n600;
+          color: $n600;
+        }
+        strong {
+          color: $n600;
+          font-weight: 400;
+        }
+      }
+      span {
+        align-items: center;
+        background: $blueb;
+        border: 1px solid $blueb;
+        border-radius: 24px;
+        box-sizing: border-box;
+        color: white;
+        display: inline-flex;
+        height: 24px;
+        justify-content: center;
+        margin-right: 16px;
+        width: 24px;
+      }
+      strong {
+        color: $n700;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        line-height: 24px;
+      }
+      svg {
+        circle {
+          stroke: $n500;
+        }
+        path {
+          fill: $n500;
+        }
+      }
+    }
+    .dots {
+      border-bottom: 2px dashed $blueb;
+      margin: 0 16px;
+      width: 32px;
+    }
+    .step__counter {
+      align-items: center;
+      color: $n700;
+      display: flex;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      line-height: 16px;
+      margin-left: 16px;
+      text-transform: uppercase;
+      .progress {
+        background: $n400;
+        border-radius: 20px;
+        height: 6px;
+        margin-left: 16px;
+        position: relative;
+        width: 212px;
+        span {
+          background-color: $blueb;
+          border-radius: 20px;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
