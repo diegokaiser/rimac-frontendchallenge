@@ -45,15 +45,27 @@
       }
     }
     .plans {
-      padding-bottom: 80px;
+      padding-bottom: 0;
+      @include laptop1280 {
+        padding-bottom: 80px;
+      }
+      .container {
+        width: 100%;
+        @include laptop1280 {
+          width: initial;
+        }
+      }
       &__content {
         display: flex;
         justify-content: space-between;
-        margin: 0;
+        margin: 0 -5% 0 0;
         width: get-width(7, 7);
         @include laptop1280 {
           margin: 0 auto;
           width: get-width(19, 23);
+        }
+        .slick-slider {
+          width: 100%;
         }
       }
     }

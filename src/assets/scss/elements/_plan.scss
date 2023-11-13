@@ -6,9 +6,11 @@
   display: flex;
   flex-direction: column;
   flex: none;
+  margin: 21px 0;
   padding: 40px 32px 48px 32px;
   width: get-width(6, 7);
   @include laptop1280 {
+    margin: 0;
     width: get-width(6, 19);
   }
   &__title {

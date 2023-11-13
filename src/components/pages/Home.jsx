@@ -18,7 +18,6 @@ export function Home () {
   const [userObj, setUserObj] = useContext(UserContext)
   const [planObj, setPlanObj] = useContext(PlanContext)
   const [vw, setVw] = useState(window.innerWidth)
-  console.log(userObj)
   const navigate = useNavigate()
   const [optionActive, setOptionActive] = useState(false)
 
@@ -35,7 +34,6 @@ export function Home () {
     const parentEl = e.target.parentElement.parentElement
     const name = parentEl.querySelector('.plan__title h3').innerText
     const price = parentEl.querySelector('.plan__price strong').innerText
-    console.log(name, price)
     setPlanObj({
       name: name,
       price: price
@@ -48,11 +46,14 @@ export function Home () {
   )
 
   const sliderSettings = {
-    dots: true,
-    infinite: true,
+    arrows: false,
+    dots: false,
+    className: "center",
+    centerMode: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   }
 
   return (
