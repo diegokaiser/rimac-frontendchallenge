@@ -21,8 +21,8 @@ Se han utilizado las siguientes librerías o paquetes:
 ## Estructura interna
 
 ```
-├── docs - # Carpeta del build
-└── src  - # Lógica de componentes de la aplicación
+├── docs                  -# Carpeta del build
+└── src                   -# Lógica de componentes de la aplicación
     ├── assets            -# Archivos estáticos
     │   ├── images        -# Imágenes
     │   │   ├── icons     -# Íconos
